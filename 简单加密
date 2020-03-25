@@ -1,0 +1,35 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+/**
+ * 加密
+ * @author 解密
+ *
+ */
+public class EncryptUtil {
+	public static void main(String[] args) {
+		encrypt("src","dest" );
+	}
+
+	public static  void encrypt(String src,String dest) {
+
+		try {
+			FileInputStream is =new FileInputStream(src);
+			FileOutputStream out =new FileOutputStream(dest);
+			
+			int temp=-1;
+			byte[] by =new byte[1024];
+			
+			while((temp=is.read())!=-1) {
+				out.write(temp^0xff);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+}
