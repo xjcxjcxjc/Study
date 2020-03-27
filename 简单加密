@@ -12,6 +12,7 @@ public class EncryptUtil {
 		encrypt("src","dest" );
 	}
 
+	//woshixjc
 	public static  void encrypt(String src,String dest) {
 
 		try {
