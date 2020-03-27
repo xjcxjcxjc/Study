@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 
 /**
  * 加密
- * @author 解密
+ * @author 项佳诚
  *
  */
 public class EncryptUtil {
