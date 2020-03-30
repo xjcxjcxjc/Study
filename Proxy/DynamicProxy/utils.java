@@ -8,16 +8,17 @@ public class utils {
 	
 	Object obj ;
 	
-	public utils(Object obj) {  //´«ÈëÒ»¸ö´úÀíÀà
+	public utils(Object obj) {  //ä¼ å…¥ä¸€ä¸ªéœ€è¦è¢«ä»£ç†çš„ç±»
 		this.obj=obj;
 	}
 	
+	//å¾—åˆ°ä»£ç†ç±»
 	public Object getproxy() {
 		Object proxy =Proxy.newProxyInstance(obj.getClass().getClassLoader(),
 				obj.getClass().getInterfaces(),
 					new InvocationHandler() {
 						public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-							System.out.println(method.getName()+"¿ªÊ¼Ê¹ÓÃ");
+							System.out.println(method.getName()+"å¼€å§‹ä½¿ç”¨");
 							method.invoke(obj, args);
 							return null;
 						}
